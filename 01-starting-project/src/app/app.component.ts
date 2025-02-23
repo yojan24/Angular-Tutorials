@@ -5,8 +5,6 @@ import { DUMMY_USERS } from './dummy-users';
 import { TaskComponent } from './Components/task/task.component';
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [HeaderComponent, UserComponent, TaskComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

@@ -7,7 +7,6 @@ import {
   output,
   Output,
 } from '@angular/core';
-import { CardComponent } from '../shared/card/card.component';
 
 interface USER {
   name: string;
@@ -16,8 +15,6 @@ interface USER {
 }
 @Component({
   selector: 'app-user',
-  standalone: true,
-  imports: [CardComponent],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css',
 })

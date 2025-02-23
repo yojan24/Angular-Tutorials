@@ -1,6 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { SeparateTaskComponent } from '../separate-task/separate-task.component';
-import { AddTaskComponent } from '../add-task/add-task.component';
 import { TaskServices } from './task.service';
 interface USER {
   id: string;
@@ -9,8 +7,6 @@ interface USER {
 }
 @Component({
   selector: 'app-task',
-  standalone: true,
-  imports: [SeparateTaskComponent, AddTaskComponent],
   templateUrl: './task.component.html',
   styleUrl: './task.component.css',
 })

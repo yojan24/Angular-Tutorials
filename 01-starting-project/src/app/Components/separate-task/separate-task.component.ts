@@ -12,8 +12,6 @@ interface TASK {
 }
 @Component({
   selector: 'app-separate-task',
-  standalone: true,
-  imports: [CardComponent, CardComponent, DatePipe],
   templateUrl: './separate-task.component.html',
   styleUrl: './separate-task.component.css',
 })
