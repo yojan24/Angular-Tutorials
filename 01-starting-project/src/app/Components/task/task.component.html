@@ -1,0 +1,18 @@
+@if(isVisible){
+<app-add-task [userId]="userId" (cancel)="setVisible()" />
+}
+<section id="tasks">
+  <header>
+    <p>{{ user?.name }}'s task</p>
+    <menu>
+      <button (click)="setVisible()">Add Task</button>
+    </menu>
+  </header>
+  <ul>
+    @for(task of selectedUserTask;track $index){
+    <li>
+      <app-separate-task [task]="task" />
+    </li>
+    }
+  </ul>
+</section>
