@@ -2,14 +2,14 @@
   <h3>
     <div
       [class]="{
-        'ticket-open': true,
-        'ticket-closed': false
+        'ticket-open': data().status === 'open',
+        'ticket-closed': data().status === 'closed'
       }"
     ></div>
-    <button>
+    <button (click)="onToggle()">
       <span class="text">TITLE</span>
       <span>
-        @if (true) {
+        @if (isVisible()) {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -43,10 +43,10 @@
     </button>
   </h3>
 
-  @if (true) {
+  @if (isVisible()) {
   <p>{{ data().text }}</p>
 
   @if (data().status==='open') {
-  <p><button>Mark as completed</button></p>
+  <p><button (click)="onMarkComplete()">Mark as completed</button></p>
   } }
 </article>

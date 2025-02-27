@@ -39,13 +39,12 @@ export class ControlComponent implements AfterContentInit {
   >;
 
   constructor() {
-    afterRender(() => {
-      console.log('afterRender');
-    });
-
-    afterNextRender(() => {
-      console.log('afterNextRender');
-    });
+    // afterRender(() => {
+    //   console.log('afterRender');
+    // });
+    // afterNextRender(() => {
+    //   console.log('afterNextRender');
+    // });
   }
 
   ngAfterContentInit(): void {

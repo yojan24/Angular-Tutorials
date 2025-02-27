@@ -32,7 +32,7 @@ main {
   }
 }
 
-/* #traffic {
+#traffic {
   display: block;
   width: 15rem;
 }
@@ -41,7 +41,7 @@ p {
   margin: 0 0 1rem 0;
   font-size: 0.9rem;
   color: #4f4b53;
-} */
+}
 
 #chart {
   height: 10rem;
@@ -68,7 +68,6 @@ p {
   display: block;
   width: 15rem;
 }
-/* 
 
 .status p:first-of-type {
   font-weight: bold;
@@ -93,7 +92,6 @@ p:last-of-type {
   margin: 0;
   color: #625e67;
 }
-*/
 
 @keyframes pulse {
   0% {
@@ -106,7 +104,6 @@ p:last-of-type {
     opacity: 1;
   }
 }
-/*
 
 .dashboard-item {
   display: block;
@@ -170,7 +167,7 @@ button:hover .icon {
   transform: translateX(4px);
 }
 
-#tickets {
+/* #tickets {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -200,9 +197,9 @@ button:hover .icon {
 
 #new-ticket {
   width: 15rem;
-}
+} */
 
-@media (min-width: 768px) {
+@media (min-width: 500px) {
   #tickets {
     flex-direction: row;
   }
@@ -225,4 +222,4 @@ button:hover .icon {
   font: inherit;
   font-size: 0.9rem;
   color: #4f4b53;
-} */
+}
