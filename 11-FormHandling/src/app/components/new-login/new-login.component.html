@@ -1,0 +1,29 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <h2>Login</h2>
+
+  <div class="control-row">
+    <div class="control no-margin">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        type="email"
+        name="email"
+        [formControl]="form.controls.Email"
+      />
+    </div>
+
+    <div class="control no-margin">
+      <label for="password">Password</label>
+      <input id="password" type="password" formControlName="password" />
+    </div>
+
+    <button class="button">Login</button>
+  </div>
+  @if(isEmailValid){
+  <p class="control-error">Please Enter valid email.</p>
+  } @if(isPasswordValid){
+  <p class="control-error">
+    Please Enter valid Password.(atleast 6 character long)
+  </p>
+  }
+</form>

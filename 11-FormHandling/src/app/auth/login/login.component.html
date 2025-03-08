@@ -1,0 +1,40 @@
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+  <h2>Login</h2>
+
+  <div class="control-row">
+    <div class="control no-margin">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        #email="ngModel"
+        ngModel
+        email
+        required
+      />
+    </div>
+
+    <div class="control no-margin">
+      <label for="password">Password</label>
+      <input
+        id="password"
+        name="password"
+        type="password"
+        #password="ngModel"
+        ngModel
+        minlength="8"
+        required
+      />
+    </div>
+
+    <button class="button">Login</button>
+  </div>
+  @if(email.touched && email.errors?.['required']){
+  <p class="control-error">Email is required</p>
+  }@else if(email.touched && email.dirty && email.invalid){
+  <p class="control-error">Email is invalid</p>
+  } @if(password.touched && password.errors?.['required']){
+  <p class="control-error">passwoed length must be al least 8 characters!!</p>
+  }
+</form>
